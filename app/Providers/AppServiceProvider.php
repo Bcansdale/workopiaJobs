@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route; // Global constraint
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+//        Route::pattern('id', '[0-9]+'); // Global constraint for routes
+//        Route::pattern('comment', '[a-zA-Z]'); // Global constraint for routes
     }
 }
